@@ -33,7 +33,7 @@ public class Main {
             //bonusovy ukol
             System.out.println(pisen1.getNazev()+" ("+ pisen1.getNazevInterpreta()+", "+pisen1.getDatumVydani() + ")");
             System.out.println(pisen2.getNazev()+" ("+ pisen2.getNazevInterpreta()+", "+pisen2.getDatumVydani() + ")");
-            String enter = sc.nextLine();
+            sc.nextLine();
 
             //oprava pres kod
             pisen1.zmenaData("18.4.1958");
@@ -41,7 +41,7 @@ public class Main {
             System.out.println("Opravené datum: ");
             System.out.println(pisen1.getNazev()+" ("+ pisen1.getNazevInterpreta()+", "+pisen1.getDatumVydani() + ")");
             System.out.println(pisen2.getNazev()+" ("+ pisen2.getNazevInterpreta()+", "+pisen2.getDatumVydani() + ")");
-            String enter2 = sc.nextLine();
+            sc.nextLine();
 
             //oprava datumu vydání uživatelem
             System.out.println("Opravte datum vydání skladeb:");
