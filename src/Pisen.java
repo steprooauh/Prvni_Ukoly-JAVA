@@ -30,4 +30,20 @@ public class Pisen {
         System.out.println("Je placená? "+(jePlacena? "Ano" : "Ne"));
         System.out.println("Cena skladby: "+cena+" Kč");
     }
+
+    public String getNazev() {
+        return nazev;
+    }
+
+    public String getNazevInterpreta() {
+        return nazevInterpreta;
+    }
+
+    public String getDatumVydani() {
+        return datumVydani;
+    }
+
+    public void zmenaData(String noveDatum) {
+        this.datumVydani = noveDatum;
+    }
 }
