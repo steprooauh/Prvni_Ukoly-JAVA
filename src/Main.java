@@ -19,6 +19,8 @@ public class Main {
         System.out.println("2 = Oprava datumu");
         System.out.println("3 = Cykly");
         System.out.println("4 = Náhodné číslo");
+        System.out.println("5 = Ukol 1");
+        System.out.println("6 = Ukol 2");
         String mainMenu = sc.nextLine();
 
         if (mainMenu.equals("1"))
@@ -51,20 +53,16 @@ public class Main {
             System.out.println(pisen1.getNazev()+" ("+ pisen1.getNazevInterpreta()+", "+value1 + ")");
             System.out.println(pisen2.getNazev()+" ("+ pisen2.getNazevInterpreta()+", "+value2 + ")");
 
-            System.out.println("Konec programu");
-            sc.close();
         } else if (mainMenu.equals("3")) {
             Cykly.vypisCisla15();
-            System.out.println("Konec programu");
-            sc.close();
         } else if (mainMenu.equals("4")) {
             Cykly.nahodneCisla();
-            System.out.println("Konec programu");
-            sc.close();
+        } else if (mainMenu.equals("5")) {
+            Cykly.ukol1();
+        } else if (mainMenu.equals("6")) {
+            Cykly.ukol2();
         }
-
-
-
-
+        System.out.println("Konec programu");
+        sc.close();
     }
 }
