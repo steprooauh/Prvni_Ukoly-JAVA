@@ -21,6 +21,7 @@ public class Main {
         System.out.println("4 = Náhodné číslo");
         System.out.println("5 = Ukol 1");
         System.out.println("6 = Ukol 2");
+        System.out.println("7 = ArrayList");
         String mainMenu = sc.nextLine();
 
         if (mainMenu.equals("1"))
@@ -61,6 +62,16 @@ public class Main {
             Cykly.ukol1();
         } else if (mainMenu.equals("6")) {
             Cykly.ukol2();
+        } else if (mainMenu.equals("7")) {
+            System.out.println("Vyberte si jak chcete pokračovat: ");
+            System.out.println("1 nebo 2");
+            int ahoj = sc.nextInt();
+
+            if (ahoj == 1) {
+                ArrayListoHodina.HodinaArray();
+            } else if (ahoj == 2) {
+                ArrayListoHodina.HodinaArray2();
+            }
         }
         System.out.println("Konec programu");
         sc.close();
