@@ -64,13 +64,17 @@ public class Main {
             Cykly.ukol2();
         } else if (mainMenu.equals("7")) {
             System.out.println("Vyberte si jak chcete pokračovat: ");
-            System.out.println("1 nebo 2");
+            System.out.println("1, 2 nebo 3");
             int ahoj = sc.nextInt();
 
             if (ahoj == 1) {
                 ArrayListoHodina.HodinaArray();
             } else if (ahoj == 2) {
                 ArrayListoHodina.HodinaArray2();
+            } else if (ahoj == 3) {
+                ArrayListoHodina.HodinaArray3();
+            } else if (ahoj == 4) {
+                ArrayListUkol.Ukol1();
             }
         }
         System.out.println("Konec programu");

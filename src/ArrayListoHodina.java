@@ -37,6 +37,36 @@ public class ArrayListoHodina {
 
         zvirata.addAll(List.of("Morče", "Zmije", "Netopýr", "Lev", "Slon"));
 
-        System.out.println(zvirata);
+        for (String zvire : zvirata) {
+            System.out.println(zvire);
+        }
+    }
+
+    public static void HodinaArray3() {
+        ArrayList<Integer> cisla = new ArrayList<>(List.of(50,60,70,80,90,100,101,123,564,849,561,546,84,516,654,846,516,648,9545459,252,9525,516,6,846,156,156,546,465,546,132));
+        cisla.addAll(List.of(546,564,89,564,1551,456486,156,546,846,51,123,654,46546,546));
+
+        System.out.println("Seznam cisel: ");
+        for (int c : cisla) {
+            System.out.println(c);
+        }
+
+        System.out.println("---------------------------------------------");
+        int max = cisla.getFirst();
+        for (int c : cisla){
+            if (c >max){
+                max = c;
+            }
+        }
+        System.out.println("Maximiliánní číslo: "+max);
+
+        //soucet
+        int soucet = 0;
+        for (int c : cisla){
+            soucet += c;
+        }
+        System.out.println("Součet všech čísel je: "+soucet);
+        System.out.println("Počet čísel v seznamu: "+cisla.size());
+        System.out.println("Průměrné číslo: " + ((double)soucet / cisla.size()));
     }
 }
