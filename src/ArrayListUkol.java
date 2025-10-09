@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Arrays;
+import java.util.*;
 
 public class ArrayListUkol {
     public static void Ukol1(){
@@ -141,5 +138,47 @@ public class ArrayListUkol {
             System.out.print(c + " ");
         }
         System.out.println();
+    }
+
+    public static void Ukol3() {
+        ArrayList<Integer> znamky = new ArrayList<>(List.of(1, 1, 3, 4, 5, 2, 2, 1, 2, 3, 4, 1, 5, 1, 2, 3, 1, 4, 5, 5));
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Známky: " + znamky);
+
+        int soucet = 0;
+        int proslo = 0;
+        int neproslo = 0;
+        int min = 5;
+        int max = 0;
+
+        for (int i : znamky) {
+            soucet += i;
+            if (i <= 4) proslo++;
+            if (i == 5) neproslo++;
+            if (i < min) min = i;
+            if (i > max) max = i;
+        }
+
+        System.out.println("Průměr: " + ((double) soucet / znamky.size()));
+        System.out.println("Prošlo: " + proslo + " studentů");
+        System.out.println("Neprošlo: " + neproslo + " studentů");
+        System.out.println("Nejlepší známka: " + min);
+        System.out.println("Nejhorší známka: " + max);
+
+        System.out.println("Zapsat známku? A/N");
+        String ano = sc.nextLine().trim();
+
+        if (ano.equalsIgnoreCase("A")) {
+            System.out.println("Vpiště známku (1-5)");
+            int znamka = Integer.parseInt(sc.nextLine());
+            if (znamka < 1 || znamka > 5) {
+                System.out.println("Špatně zadaná známka! Chyba");
+            } else {
+                znamky.add(znamka);
+                System.out.println("Aktualizovaný seznam známek: " + znamky);
+                // Volitelně: vypočítej statistiky znovu
+            }
+        }
     }
 }
