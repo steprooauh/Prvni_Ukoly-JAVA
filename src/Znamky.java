@@ -62,7 +62,7 @@ public class Znamky {
                 znamka = 5;
             }
             znamky.add(znamka);
-
+//n
             String prospel = (znamka < 5) ? "prospěl" : "neprospěl";
             pr.add(prospel);
         }
