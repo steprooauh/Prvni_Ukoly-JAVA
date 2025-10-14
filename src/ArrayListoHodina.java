@@ -19,8 +19,8 @@ public class ArrayListoHodina {
 
         System.out.println("Poslední: " + superarraylistecek.getLast());
 
-        superarraylistecek.remove("Nika");
-        superarraylistecek.remove(1);
+        superarraylistecek.remove("Marky");
+        superarraylistecek.remove(5);
 
         System.out.println();
 
